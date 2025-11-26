@@ -127,7 +127,7 @@ double background_function(double x) {
 
 double Data::chiSquare_ndof() {
     double chi2 = 0.0;
-    int ndof = size()-4;
+    int ndof = size();
     for (unsigned int i = 0; i < size(); i++) {
         double x = 0.5 * (binLow(i) + binHigh(i));
         double expected = background_function(x);
